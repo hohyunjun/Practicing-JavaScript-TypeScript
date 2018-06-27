@@ -1,0 +1,52 @@
+div .resultdisplay{
+  background-color:black;
+  text-align:center;
+  width:235px;
+  height:60px;
+  color:white;
+  display:inline-block;
+  border-radius: 5px;
+  border: 3px solid black;
+  margin: 5px;
+}
+#description{
+  text-align:center;
+  font-size:30px;
+  padding: 25px;
+}
+#result{
+  width:110px;
+}
+#display{
+  margin-top:5px;
+  margin-bottom:5px;
+}
+#mid-value{
+  color:gray;
+}
+#Calculator{
+  text-align:center;
+}
+
+/* buttons 의 child div 에 대해 적용되도록 css 수정 */
+div .buttons > div{
+  border : 3px solid black;
+  display: inline-block;
+  width: 50px;
+  text-align:center;
+  border-radius: 5px;
+  border-collapse:collapse;
+  margin-bottom:1px;
+}
+
+div .operator{
+  background-color:#ff944d;
+}
+
+/* buttons 의 child div 에 대해 적용되도록 css 수정 */
+.buttons > div:hover{
+  background-color:blue;
+}
+::placeholder{
+  color:white;
+}

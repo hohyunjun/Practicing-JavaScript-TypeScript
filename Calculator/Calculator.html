@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Calculator</title>
+    <link rel="stylesheet" href="Calculate.css">
+    <!-- script tag 위치변경, Calculate.js 파일에 DOMContentLoaded EventListener 추가 -->
+    <script type="text/javascript" src="Calculate.js"></script>
+  </head>
+  <body>
+    <!-- Inline CSS를 다 CSS 파일로 옮김. MVC모델을 따르도록 수정. -->
+    <div id="description">Simple Calculator With JavaScript</div>
+    <div>
+      <!-- form 태그 대신 div 태그로 수정 -->
+      <div id = "Calculator" name="Calculator">
+        <div class="resultdisplay">
+          <div id="display"></div>
+          <span id="mid-value"></span>
+        </div>
+        <!-- 기존의 br태그 대신 div 태그로 수정 -->
+        <div class="buttons">
+          <div onclick="makeAppendFunction('7')()" />7</div>
+          <div onclick="makeAppendFunction('8')()" />8</div>
+          <div onclick="makeAppendFunction('9')()" />9</div>
+          <div class="operator" onclick="makeAppendFunction('+')()" />+</div>
+        </div>
+        <div class="buttons">
+          <div onclick="makeAppendFunction('4')()" />4</div>
+          <div onclick="makeAppendFunction('5')()" />5</div>
+          <div onclick="makeAppendFunction('6')()" />6</div>
+          <div class="operator" onclick="makeAppendFunction('-')()" />-</div>
+        </div >
+        <div class="buttons">
+          <div onclick="makeAppendFunction('1')()" />1</div>
+          <div onclick="makeAppendFunction('2')()" />2</div>
+          <div onclick="makeAppendFunction('3')()" />3</div>
+          <div class="operator" onclick="makeAppendFunction('*')()" />*</div>
+        </div>
+        <div class="buttons">
+          <div onclick="makeAppendFunction('0')()" />0</div>
+          <div class="operator" onclick="makeAppendFunction('%')()" />%</div>
+          <div class="operator" onclick="makeAppendFunction('.')()" />.</div>
+          <div class="operator" onclick="makeAppendFunction('/')()" />/</div>
+        </div>
+        <div class="buttons">
+          <div class="operator" onclick="pressBtnDelete()" />del</div>
+          <div class="operator" onclick="pressBtnClear()" />clear</div>
+          <div id="result" class="operator" onclick="modifyInnerText('display', eval(document.getElementById('display').innerText))"/>=</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

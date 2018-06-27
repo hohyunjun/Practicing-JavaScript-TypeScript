@@ -1,0 +1,5 @@
+HTML의 <canvas>는 웹페이지에 그래픽을 그리는 데 사용된다.
+<canvas>는 그래픽을 위한 container일 뿐, 실제로 그래픽을 그리기 위해서는 script를 사용해야 한다.
+Canvas는 경로, 박스, 원, 텍스트, 이미지를 위한 메소드를 가지고 있다.
+
+Javascript에서 Canvas에 그리기
