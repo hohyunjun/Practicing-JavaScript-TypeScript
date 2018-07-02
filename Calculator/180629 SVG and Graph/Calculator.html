@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Calculator</title>
+    <link rel="stylesheet" href="Calculate.css">
+    <!-- script tag 위치변경, Calculate.js 파일에 DOMContentLoaded EventListener 추가 -->
+    <script type="text/javascript" src="Calculate.js"></script>
+  </head>
+  <body>
+    <!-- Inline CSS를 다 CSS 파일로 옮김. MVC모델을 따르도록 수정. -->
+    <div id="description">Simple Calculator Using SVG</div>
+    
+    <!-- graphic 부분들 다 svg로 변경 -->
+    <div id = "Calculator" class="calculator">
+      <div class="resultdisplay">
+        <svg width="240" height="80">
+            <rect rx="10" ry="10" width="240" height="80" style="fill:black;"/>
+            <text id="display" font-size="16" x="120" y="40"></text>
+            <text id="mid-value" font-size="16" x="120" y="60"></text>
+        </svg>
+      </div>
+      <!-- 기존의 br태그 대신 div 태그로 수정 -->
+      <div class="buttons">
+        <svg width="250" height="150">
+          <rect class="numbers" onclick="makeAppendFunction('7')()" x="5" y="5" rx="5" ry="5" width="55" height="23" />
+          <text font-size="16" x="28" y="23" pointer-events="none">7</text>
+          <rect class="numbers" onclick="makeAppendFunction('8')()" x="66" y="5" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="89" y="23" pointer-events="none">8</text>
+
+          <rect class="numbers" onclick="makeAppendFunction('9')()" x="127" y="5" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="150" y="23" pointer-events="none">9</text>
+          <rect class="operators" onclick="makeAppendFunction('+')()" x="188" y="5" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="211" y="23" pointer-events="none">+</text>
+
+          <rect class="numbers" onclick="makeAppendFunction('4')()" x="5" y="34" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="28" y="52" pointer-events="none">4</text>
+          <rect class="numbers" onclick="makeAppendFunction('5')()" x="66" y="34" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="89" y="52" pointer-events="none">5</text>
+          <rect class="numbers" onclick="makeAppendFunction('6')()" x="127" y="34" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="150" y="52" pointer-events="none">6</text>
+          <rect  class="operators" onclick="makeAppendFunction('-')()" x="188" y="34" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="211" y="52" pointer-events="none">-</text>
+
+          <rect class="numbers" onclick="makeAppendFunction('1')()" x="5" y="63" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="28" y="81" pointer-events="none">1</text>
+          <rect class="numbers" onclick="makeAppendFunction('2')()" x="66" y="63" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="89" y="81" pointer-events="none">2</text>
+          <rect class="numbers" onclick="makeAppendFunction('3')()" x="127" y="63" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="150" y="81" pointer-events="none">3</text>
+          <rect class="operators" onclick="makeAppendFunction('*')()" x="188" y="63" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="211" y="81" pointer-events="none">*</text>
+
+          <rect class="numbers" onclick="makeAppendFunction('0')()" x="5" y="92" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="28" y="110" pointer-events="none">0</text>
+          <rect class="operators" onclick="makeAppendFunction('%')()" x="66" y="92" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="89" y="110" pointer-events="none">%</text>
+          <rect class="numbers" onclick="makeAppendFunction('.')()" x="127" y="92" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="153" y="110" pointer-events="none">.</text>
+          <rect class="operators" onclick="makeAppendFunction('/')()" x="188" y="92" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="211" y="110" pointer-events="none">/</text>
+
+          <rect class="operators" onclick="pressBtnDelete()" x="5" y="121" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="33" y="139" text-anchor="middle" pointer-events="none">del</text>
+          <rect class="operators" onclick="pressBtnClear()" x="66" y="121" rx="5" ry="5" width="55" height="23"/>
+          <text font-size="16" x="94" y="139" text-anchor="middle" pointer-events="none">clear</text>
+          <rect id="eval" class="operators" x="127" y="121" rx="5" ry="5" width="116" height="23" />
+          <text font-size="16" x="182" y="132.5" text-anchor="middle" alignment-baseline="middle" pointer-events="none">=</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- bar chart -->
+    <div class="graph">
+      <svg width="770" height="450">
+        <g class="axis">
+          <path d="M100 30 L100 380 L740 380" stroke="black" fill="none"/>
+        </g>
+        <g class="labels x-labels">
+          <text x="140" y="400">First</text>
+          <text x="257.5" y="400">Second</text>
+          <text x="395" y="400">Third</text>
+          <text x="532.5" y="400">Fourth</text>
+          <text x="670" y="400">Fifth</text>
+          <text x="350" y="430" class="label-title">Caculate Sequence</text>
+        </g>
+        <g class="labels y-labels">
+          <text x="50" y="50">100</text>
+          <line x1="100" y1="50" x2="740" y2="50" stroke="black" stroke-dasharray="5,5"></line>
+          <text x="60" y="116">80</text>
+          <line x1="100" y1="116" x2="740" y2="116" stroke="black" stroke-dasharray="5,5"></line>
+          <text x="60" y="182">60</text>
+          <line x1="100" y1="182" x2="740" y2="182" stroke="black" stroke-dasharray="5,5"></line>
+          <text x="60" y="248">40</text>
+          <line x1="100" y1="248" x2="740" y2="248" stroke="black" stroke-dasharray="5,5"></line>
+          <text x="60" y="314">20</text>
+          <line x1="100" y1="314" x2="740" y2="314" stroke="black" stroke-dasharray="5,5"></line>
+          <text x="70" y="380">0</text>
+          <text x="0" y="220" class="label-title">Result</text>
+        </g>
+        <g class="data">
+          <rect class="bar" x="130" y="380" width="40" height="0" stroke="black"></rect>
+          <circle cx="150" cy="380" data-value="7.2" r="4"></circle>
+          <rect class="bar" x="257.5" y="380" width="40" height="0" stroke="black"></rect>
+          <circle cx="277.5" cy="380" data-value="8.1" r="4"></circle>
+          <rect class="bar" x="390" y="380" width="40" height="0" stroke="black"></rect>
+          <circle cx="410" cy="380" data-value="7.7" r="4"></circle>
+          <rect class="bar" x="532.5" y="380" width="40" height="0" stroke="black"></rect>
+          <circle cx="552.5" cy="380" data-value="6.8" r="4"></circle>
+          <rect class="bar" x="662" y="380" width="40" height="0" stroke="black"></rect>
+          <circle cx="682" cy="380" data-value="6.7" r="4"></circle>
+        </g>
+      </svg>
+
+    </div>
+   
+  </body>
+</html>
