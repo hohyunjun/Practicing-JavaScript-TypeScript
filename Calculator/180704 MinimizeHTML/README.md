@@ -37,7 +37,7 @@
    tag를 생성해주는 함수와 속성을 설정해주는 함수를 만들었다.
 
 3. 아래 함수 호출 과정에서, buttonfor에 '+', '.' 등을 넣어서 함수 호출 시 에러 발생  
-```
+    ```
     function makeButtonOperatorsRect(x, y, buttonfor) {
       var buttonRect = createSVG('rect');
       var buttonRectAttr = {
@@ -53,9 +53,9 @@
       setAttributes(buttonRect, buttonRectAttr);
       return buttonRect;
     }  
-```  
-  Uncaught SyntaxError: Unexpected token * 에러가 발생함.  
-  해결책을 찾지못해 명시적으로 다시 onclick Attribute를 선언했음.
+    ```  
+    Uncaught SyntaxError: Unexpected token * 에러가 발생함.  
+    해결책을 찾지못해 명시적으로 다시 onclick Attribute를 선언했음.
 
 4. 여러 개의 태그들을 최소한의 코드로 append하기 위해 태그들을 저장할 배열을 만들었음.  
     button에서는 buttonRects, buttonTexts  
