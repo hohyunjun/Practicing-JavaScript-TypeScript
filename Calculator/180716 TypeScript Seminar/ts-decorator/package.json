@@ -1,0 +1,9 @@
+{
+  "name": "ts-decorator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.9.2"
+  }
+}

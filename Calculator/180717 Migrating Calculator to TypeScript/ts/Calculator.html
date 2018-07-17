@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Calculator</title>
+    <link rel="stylesheet" href="Calculate.css">
+    <!-- script tag 위치변경, Calculate.js 파일에 DOMContentLoaded EventListener 추가 -->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script type="text/javascript" src="../src/Calculate.js"></script>
+  </head>
+  <body>
+    <!-- Inline CSS를 다 CSS 파일로 옮김. MVC모델을 따르도록 수정. -->
+    <div id="description">Simple Calculator Using SVG</div>
+    
+    <!-- graphic 부분들 다 svg로 변경 -->
+    <div id = "Calculator" class="calculator">
+      <div class="resultdisplay">
+      </div>
+      <!-- 기존의 br태그 대신 div 태그로 수정 -->
+      <div class="buttons">
+      </div>
+    </div>
+
+    <!-- bar chart -->
+    <div class="graph">
+
+    </div>
+
+    <!-- bar chart using D3 -->
+    <div id="description">Graph Using D3</div>
+    <div class="d3Graph">
+
+    </div>
+
+    <div id="description">Graph Using Chart.js</div>
+    <!-- bar chart using chart.js-->
+    <div class="chartJsGraph">
+      <canvas id="barChart" width="770" height="450" style="display:inline-block;"></canvas>
+
+    </div>
+  </body>
+</html>
