@@ -1,0 +1,17 @@
+{
+  "name": "Calculator",
+  "version": "1.0.0",
+  "description": "d3.js와 chart.js의 경우엔 d3.d.ts같은 정의파일을 활용할 필요가 있어요.",
+  "main": "index.js",
+  "dependencies": {
+    "chart.js": "^2.7.2",
+    "npm": "^6.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

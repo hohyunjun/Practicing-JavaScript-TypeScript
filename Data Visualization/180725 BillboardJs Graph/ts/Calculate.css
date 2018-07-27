@@ -1,0 +1,95 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#description{
+  text-align:center;
+  font-size:30px;
+  padding: 25px;
+}
+#result{
+  width:110px;
+}
+
+#display{
+  fill:white;
+} 
+#mid-value{
+  fill:gray;
+}
+#Calculator{
+  text-align:center;
+}
+
+.buttons rect:hover{
+  fill:blue;
+}
+
+.operators {
+  fill:red;
+  stroke:black;
+  stroke-width:2;
+  opacity:0.5;
+}
+
+.numbers {
+  fill:rgb(73, 219, 105);
+  stroke:black;
+  stroke-width:2;
+  opacity:0.5;
+}
+
+/* Graph CSS */
+.graph{
+  margin-top:20px;
+  text-align:center;
+}
+.axis{
+  stroke: #ccc;
+  stroke-dasharray: 0;
+  stroke-width: 1;
+}
+
+.label-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  fill: black;
+}
+
+.labels {
+  font-size: 13px;
+}
+
+.data rect{
+  fill: rgb(0, 132, 255);
+}
+
+.d3Graph{
+  text-align:center;
+}
+.d3Graph div{
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+.chartJsGraph {
+  text-align: center;
+}
+
+.billBoardJsGraph {
+  text-align: center;
+}
+
+#billBoardChart{
+  display:inline-block;
+}
+/* SVG graph Animate CSS */
+.data rect{
+  transition: all 1.5s;
+}
+
