@@ -73,7 +73,7 @@ Using *console.time* and *console.timeEnd* API, measuring the execution speed of
   echarts.js : 68~110ms
   toast.js : 103~161ms  
 ```
-![Bar](/HohyunJun/img/BarChartExecSpeedCompare.png) 
+![Bar](/Data%20Visualization/180817%20Final_DataVisualizationReport/img/BarChartExecSpeedCompare.png) 
 
 ```
 2. Pie Chart
@@ -83,7 +83,7 @@ Using *console.time* and *console.timeEnd* API, measuring the execution speed of
   echarts.js : 62~105ms
   toast.js : 139~181ms
 ```
-![Pie](/HohyunJun/img/PieChart_Exec_Speed_Compare.png) 
+![Pie](/Data%20Visualization/180817%20Final_DataVisualizationReport/img/PieChart_Exec_Speed_Compare.png) 
 
 ```
 3. Bubble Chart
@@ -93,7 +93,7 @@ Using *console.time* and *console.timeEnd* API, measuring the execution speed of
   echarts.js : 70~99ms
   toast.js : 116~150ms
 ```
-![Bubble](/HohyunJun/img/BubbleChart_Exec_Speed_Compare.png) 
+![Bubble](/Data%20Visualization/180817%20Final_DataVisualizationReport/img/BubbleChart_Exec_Speed_Compare.png) 
 
 ```  
 4. Line Chart
@@ -103,7 +103,7 @@ Using *console.time* and *console.timeEnd* API, measuring the execution speed of
   echarts.js : 86~122ms
   toast.js : 114~159ms
 ```
-![Line](/HohyunJun/img/LineChart_Exec_Speed_Compare.png) 
+![Line](/Data%20Visualization/180817%20Final_DataVisualizationReport/img/LineChart_Exec_Speed_Compare.png) 
 
 Of course I didn't draw exactly same chart for each framework, but we can see that it shows meaningful execution time difference.  
 The fastest one is D3.js and the slowest one is Toast.js.  
